@@ -1,8 +1,6 @@
 import styled from "styled-components";
-import backgroud1 from "assets/bg-boost-desktop.svg";
-import backgroud2 from "assets/bg-shorten-desktop.svg";
-import backgroud3 from "assets/bg-boost-mobile.svg";
-import backgroud4 from "assets/bg-shorten-mobile.svg";
+import backgroud1 from "assets/bg-shorten-desktop.svg";
+import backgroud2 from "assets/bg-shorten-mobile.svg";
 
 const mainPadding = "calc(8 * 0.6vw)";
 
@@ -25,25 +23,11 @@ export const Container = styled.section`
         ${({ theme }) => theme.DarkViolet}
       );
     background-size: cover;
-    background-position: center;
+    background-position: right center;
     border-radius: 8px;
 
-    @media screen and (max-width: 1023.9px) {
-      background: url(${backgroud2}) no-repeat,
-        linear-gradient(
-          ${({ theme }) => theme.DarkViolet},
-          ${({ theme }) => theme.DarkViolet}
-        );
-      background-position: right center;
-    }
     @media screen and (max-width: 767.9px) {
-      background: url(${backgroud3}) no-repeat,
-        linear-gradient(
-          ${({ theme }) => theme.DarkViolet},
-          ${({ theme }) => theme.DarkViolet}
-        );
-      background-position: right center;
-
+      background-position: center;
       flex-direction: column;
       align-items: center;
       padding: 32px;
@@ -56,7 +40,7 @@ export const Container = styled.section`
       }
     }
     @media screen and (max-width: 424.9px) {
-      background: url(${backgroud4}) no-repeat,
+      background: url(${backgroud2}) no-repeat,
         linear-gradient(
           ${({ theme }) => theme.DarkViolet},
           ${({ theme }) => theme.DarkViolet}

@@ -1,14 +1,16 @@
 import { Container } from "./styles";
-import Logo from "assets/logo.svg";
+import { Header } from "components/Header";
+import { Main } from "components/Main";
+import { Links } from "components/Links";
 
 export const Landing = () => {
   return (
     <Container>
-      <header>
-        <div>
-          <img src={Logo} alt="brand" />
-        </div>
-      </header>
+      <Header />
+
+      <Main />
+
+      <Links />
     </Container>
   );
 };

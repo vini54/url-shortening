@@ -11,6 +11,7 @@ export const Container = styled.section`
   flex-direction: column;
   gap: 24px;
   padding: 0 ${mainPadding};
+
   .inputContainer {
     width: 100%;
     padding: 48px;
@@ -25,6 +26,7 @@ export const Container = styled.section`
     background-size: cover;
     background-position: right center;
     border-radius: 8px;
+    position: relative;
 
     @media screen and (max-width: 767.9px) {
       background-position: center;
@@ -56,6 +58,7 @@ export const Container = styled.section`
       outline: none;
       font-size: 1em;
       border-radius: 8px;
+      transition: 0.4s linear;
     }
     button {
       width: 160px;
@@ -65,17 +68,47 @@ export const Container = styled.section`
       font-size: 1em;
       border-radius: 8px;
       transition: 0.4s ease;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       &:hover {
         filter: brightness(120%);
+      }
+    }
+
+    &.warning {
+      input {
+        border: 2px solid ${({ theme }) => theme.Red};
       }
     }
   }
 
   ul {
     width: 100%;
+    max-height: 50vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 16px;
+    overflow-y: auto;
+
+    .spinner {
+      margin: 8px;
+      color: ${({ theme }) => theme.Cyan};
+    }
+
+    &::-webkit-scrollbar {
+      width: 12px;
+    }
+    &::-webkit-scrollbar-track {
+      background-color: #f0f1f6;
+    }
+    &::-webkit-scrollbar-thumb {
+      background-color: ${({ theme }) => theme.Cyan};
+      border-radius: 8px;
+      border: 2px solid #f0f1f6;
+    }
+
     li {
       width: 100%;
       padding: 16px;
@@ -95,12 +128,16 @@ export const Container = styled.section`
           overflow-x: hidden;
           font-weight: 500;
           color: ${({ theme }) => theme.VeryDarkBlue};
+          display: flex;
+          align-items: center;
         }
         a {
           max-width: 46%;
           overflow-x: hidden;
           font-weight: 600;
           color: ${({ theme }) => theme.Cyan};
+          display: flex;
+          align-items: center;
         }
       }
       button {

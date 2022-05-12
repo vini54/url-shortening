@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [vercel link](url-shortening-woad.vercel.app)
+- [Solution URL](https://www.frontendmentor.io/solutions/short-links-with-reacttypescript-S19TXJs89)
+- Live Site URL: [vercel link](https://url-shortening-woad.vercel.app)
 
 ## My process
 
